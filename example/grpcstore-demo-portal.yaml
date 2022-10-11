@@ -1,0 +1,26 @@
+apiVersion: portal.gloo.solo.io/v1beta1
+kind: Portal
+metadata:
+  name: grpcstore-demo-portal
+  namespace: default
+spec:
+  displayName: gRPC Store Demo Portal
+  description: The Gloo Portal for the REST to gRPC API
+  banner:
+    fetchUrl: 
+  favicon:
+    fetchUrl:
+  primaryLogo:
+    fetchUrl: 
+  customStyling: {}
+  staticPages: []
+
+  domains:
+  # If you are using Gloo Edge and the Gateway is listening on a port other than 80, 
+  # you need to include a domain in this format: <DOMAIN>:<INGRESS_PORT> as we do below
+  - portal.multicluster.io
+
+  # This will include all API product of the environment in the portal
+  publishedEnvironments:
+  - name: dev
+    namespace: default
