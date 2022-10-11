@@ -3,7 +3,7 @@
   "info" : {
     "title" : "gRPC Store",
     "description" : "gRPC Store",
-    "version" : "0.1"
+    "version" : "0.2"
   },
   "servers" : [ {
     "url" : "https://edge.multicluster.io"
