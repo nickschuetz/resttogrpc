@@ -1,0 +1,26 @@
+apiVersion: portal.gloo.solo.io/v1beta1
+kind: APIProduct
+metadata:
+  name: grpcstore-demo-product
+  namespace: default
+  labels:
+    app: grpcstore-demo
+spec:
+  displayInfo: 
+    description: gRPC Store Demo Product
+    title: gRPC Store Demo Product
+  versions:
+  - name: v1
+    apis:
+    - apiDoc:
+        name: grpcstore-demo-schema
+        namespace: default
+    gatewayConfig:
+      route:
+        inlineRoute:
+          backends:
+          - upstream:
+              name: default-grpcstore-demo-80
+              namespace: gloo-system
+    tags:
+      stable: {}

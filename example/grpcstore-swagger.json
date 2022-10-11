@@ -1,0 +1,128 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "gRPC Store",
+    "description" : "gRPC Store",
+    "version" : "0.1"
+  },
+  "servers" : [ {
+    "url" : "https://edge.multicluster.io"
+  } ],
+  "paths" : {
+    "/items" : {
+      "get" : {
+        "description" : "ListItems",
+        "operationId": "ListItems",
+        "responses" : {
+          "200" : {
+            "description" : "ListItems",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : {
+                    "items" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "name" : {
+                            "type" : "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "{\"items\":[{\"name\":\"item1\"}]}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "https://edge.multicluster.io"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "https://edge.multicluster.io"
+      } ]
+    },
+    "/items/item1" : {
+      "get" : {
+        "description" : "GetItem",
+        "operationId": "GetItem",
+        "responses" : {
+          "200" : {
+            "description" : "GetItem",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : {
+                    "item" : {
+                      "type" : "object",
+                      "properties" : {
+                        "name" : {
+                          "type" : "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "{\"item\":{\"name\":\"item1\"}}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "https://edge.multicluster.io"
+        } ]
+      },
+      "delete" : {
+        "description" : "DeleteItem",
+        "operationId": "DeleteItem",
+        "responses" : {
+          "200" : {
+            "description" : "DeleteItem",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : {
+                    "item" : {
+                      "type" : "object",
+                      "properties" : {
+                        "name" : {
+                          "type" : "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "{\"item\":{\"name\":\"item1\"}}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "https://edge.multicluster.io"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "https://edge.multicluster.io"
+      } ]
+    }
+  }
+}
