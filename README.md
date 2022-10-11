@@ -26,6 +26,7 @@ kubectl apply -f grpcstore-demo-apidoc.yaml
 kubectl apply -f grpcstore-demo-apiproduct.yaml
 kubectl apply -f grpcstore-demo-environment.yaml
 kubectl apply -f grpcstore-demo-portal.yaml
+kubectl apply -f grpcstore-demo-user.yaml
 ```
 
 If you take a look at [grpcstore-demo-apidoc.yaml](https://github.com/nickschuetz/resttogrpc/blob/main/example/grpcstore-demo-apidoc.yaml) we're using `fetchURL` to grab the pre defined OpenAPI schema:
