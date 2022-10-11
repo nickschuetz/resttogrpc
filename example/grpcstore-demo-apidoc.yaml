@@ -9,7 +9,7 @@ spec:
   openApi:
     content:
       # we use a fetchUrl here to tell the Gloo Portal
-      # to fetch the schema contents directly from the petstore service.
+      # to fetch the schema contents directly from the grpcstore service.
       #
       # configmaps and inline strings are also supported.
       fetchUrl: https://raw.githubusercontent.com/nickschuetz/resttogrpc/main/example/grpcstore-swagger.json

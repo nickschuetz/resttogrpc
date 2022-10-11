@@ -7,7 +7,7 @@ spec:
   domains:
   # If you are using Gloo Edge and the Gateway is listening on a port other than 80, 
   # you need to include a domain in this format: <DOMAIN>:<PORT>.
-  - edge.multicluster.io
+  - api.multicluster.io
   displayInfo:
     description: This environment is meant for developers to deploy and test their APIs.
     displayName: Development
@@ -24,7 +24,7 @@ spec:
     disableRoutes: true
   # This field will determine which APIProduct versions are published in this Environment.
   # Each entry represents a selector which contains criteria to match the desired API product versions.
-  # Here we use a single selector that will match all APIProducts with the 'app: petstore' label in all namespaces;
+  # Here we use a single selector that will match all APIProducts with the 'app: grpcstore-demo' label in all namespaces;
   # Additionally, we want to select only version of these APIProducts that contain the 'stable' tag.
   apiProducts:
   - namespaces:
