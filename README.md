@@ -45,3 +45,10 @@ If you take a look at [grpcstore-demo-apidoc.yaml](https://github.com/nickschuet
 
 The `watchService` section tells Gloo Edge to pull in any updates to your OpenAPI schema upon any service updates.
 
+### Step 3
+Now port-forward to the admin portal locally to gain access
+```
+kubectl -n gloo-portal port-forward svc/gloo-portal-admin-server 8080 &
+```
+
+Open a your browser and go to the following URL `http://localhost:8080`
