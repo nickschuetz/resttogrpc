@@ -7,11 +7,11 @@ spec:
   displayName: gRPC Store Demo Portal
   description: The Gloo Portal for the REST to gRPC API
   banner:
-    fetchUrl: 
+    fetchUrl: https://i.imgur.com/EXbBN1a.jpg 
   favicon:
-    fetchUrl:
+    fetchUrl: https://i.imgur.com/QQwlQG3.png
   primaryLogo:
-    fetchUrl: 
+    fetchUrl: https://i.imgur.com/hjgPMNP.png
   customStyling: {}
   staticPages: []
 
