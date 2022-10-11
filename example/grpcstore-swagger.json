@@ -85,7 +85,8 @@
         "servers" : [ {
           "url" : "https://edge.multicluster.io"
         } ]
-      },
+      }
+     },
     "/items/item1" : {
       "get" : {
         "description" : "GetItem",
