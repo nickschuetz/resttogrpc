@@ -1,4 +1,35 @@
 apiVersion: portal.gloo.solo.io/v1beta1
+kind: Group
+metadata:
+  name: developers
+  namespace: gloo-portal
+spec:
+  displayName: developers
+  # AccessLevel determines the resources the group has access to,
+  # including APIProducts and Portals.
+  accessLevel:
+    apis:
+    - products:
+        namespaces:
+        - "*"
+        labels:
+        - key: app
+          operator: In
+          values:
+          - grpcstore-demo
+      environments:
+        namespaces:
+        - "*"
+      usagePlans:
+      - basic
+    portals:
+    - name: grpcstore-demo-portal
+      namespace: default
+  userSelector:
+    matchLabels:
+      groups.portal.gloo.solo.io/gloo-portal.developers: "true"
+---
+apiVersion: portal.gloo.solo.io/v1beta1
 kind: User
 metadata:
   name: dev1
