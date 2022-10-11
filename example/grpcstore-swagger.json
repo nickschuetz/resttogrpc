@@ -51,7 +51,7 @@
         "url" : "https://edge.multicluster.io"
       } ]
     },
-    "/items" : {
+    "/items -d '{"item":{"name":"item1"}}'" : {
       "post" : {
         "description" : "CreateItem",
         "operationId": "CreateItem",
