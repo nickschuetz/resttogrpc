@@ -51,4 +51,4 @@ Now port-forward to the admin portal locally to gain access
 kubectl -n gloo-portal port-forward svc/gloo-portal-admin-server 8080 &
 ```
 
-Open a your browser and go to the following URL `http://localhost:8080`
+Open a your browser and go to the following URL [http://localhost:8080](http://localhost:8080)
