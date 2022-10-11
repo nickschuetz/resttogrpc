@@ -9,7 +9,7 @@
     "url" : "https://edge.multicluster.io"
   } ],
   "paths" : {
-    "/items/" : {
+    "/items" : {
       "get" : {
         "description" : "ListItems",
         "operationId": "ListItems",
@@ -92,37 +92,6 @@
         "responses" : {
           "200" : {
             "description" : "DeleteItem",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "type" : "object",
-                  "properties" : {
-                    "item" : {
-                      "type" : "object",
-                      "properties" : {
-                        "name" : {
-                          "type" : "string"
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples" : {
-                  "0" : {
-                    "value" : "{\"item\":{\"name\":\"item1\"}}"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "create" : {
-        "description" : "CreateItem",
-        "operationId": "CreateItem",
-        "responses" : {
-          "200" : {
-            "description" : "CreateItem",
             "content" : {
               "application/json" : {
                 "schema" : {
